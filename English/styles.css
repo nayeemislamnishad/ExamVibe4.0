@@ -400,8 +400,8 @@ input[type="number"] {
 .highlight {
     font-weight: bold;
     background:rgb(0, 47, 255);
-    background:rgb(0 30 147);
-    color: white;
+    background:white;
+    color:red;
 }
 @keyframes float {
     0% {
@@ -971,3 +971,4 @@ button#closeChat{
     border: 1px solid black;
     border-radius: 5px;
 }
+
