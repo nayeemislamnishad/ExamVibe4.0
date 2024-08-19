@@ -66,35 +66,6 @@ button:hover {
 }
 
 
-/* Same as before */
-
-.option {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 1px solid #000;
-    margin: 0 5px;
-}
-
-.option.selected {
-    background-color: #007bff;
-}
-/* Add the following styles to your existing styles.css file */
-
-.option {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 1px solid #000;
-    border-radius: 50%; /* Makes the shape a circle */
-    margin: 0 5px;
-}
-
-.option.selected {
-    background-color: #007bff;
-}
-
-/* Updated styles to create bubble circles with letters centered inside */
 
 .option {
     display: inline-flex;
@@ -167,11 +138,11 @@ button:hover {
 }
 
 .correct {
-    background-color:#15cd15; /* Green */
+    background-color:#15cd15; 
 }
 
 .incorrect {
-    background-color: #ff7f7f; /* Red */
+    background-color: #ff7f7f; 
 }
 .option {
     display: inline-block;
@@ -183,20 +154,18 @@ button:hover {
     text-align: center;
     line-height: 20px;
     cursor: pointer;
-    outline: none; /* Remove default focus outline */
+    outline: none; 
 }
 
 .option.selected {
-    /* background-color: #001fff;
-    background-color: #94A6B8; */
     background-color: #4c555f;
     border-color: #4c555f;
     color: #fff;
-    /* border-color: #94A6B8; */
+
 }
 
 .option.selected:focus {
-    outline: none; /* Remove focus outline for selected options */
+    outline: none;
 }
 
 .correct {
@@ -469,13 +438,7 @@ input[type="number"] {
     pointer-events: none; /* Allow clicks to pass through */
 }
 
-#answers{
-  
-  padding:10px;
-  
-  border: 1px solid black;
-  border-radius: 5px;
-}
+
 
 #needToKnow {
     background-color: white;
