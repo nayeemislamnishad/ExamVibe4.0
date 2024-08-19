@@ -276,6 +276,16 @@ designSb.style.cursor = "pointer";
 designSb.style.transition = "all 0.3s ease";
 designSb.style.boxShadow = "0px 4px 8px rgba(0, 0, 0, 0.2)";
 
+document.getElementById("noteIt").style.marginTop="5px";
+const groups = document.getElementsByClassName('form-group');
+
+for (let i = 0; i < groups.length; i++) {
+  groups[i].style.backgroundColor = '#f2f7f2';
+  groups[i].style.padding = '0px';
+  groups[i].style.margin = '0px';
+
+}
+
 
 designSb.onmouseover = function() {
     this.style.background = "linear-gradient(135deg, #74c69d 0%, #a8d5ba 100%)";
