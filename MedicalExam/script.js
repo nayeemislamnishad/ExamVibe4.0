@@ -322,7 +322,7 @@ function selectOption(option, letter, questionNumber) {
     if (option.classList.contains('selected')) return;
     options.forEach(opt => {
         opt.classList.remove('selected');
-        opt.onclick = null; 
+        // opt.onclick = null; 
     });
     option.classList.add('selected');
     option.dataset.questionNumber = questionNumber;
