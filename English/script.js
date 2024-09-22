@@ -314,7 +314,10 @@ designSb.onmouseout = function() {
  const selectedOptionss = [];
  let currentIndex = 0; 
 function selectOption(option, letter, questionNumber) {
-    if (answersSubmitted || questionNumber !== serialMustBeFollow[currentIndex]) return;
+  //  if (answersSubmitted || questionNumber !== serialMustBeFollow[currentIndex]) return;
+   
+    if (answersSubmitted) return;
+
     const options = option.parentNode.querySelectorAll('.option');
     if (option.classList.contains('selected')) return;
     options.forEach(opt => {
