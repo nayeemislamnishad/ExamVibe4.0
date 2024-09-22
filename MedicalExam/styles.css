@@ -1,0 +1,947 @@
+body {
+    font-family: Arial, sans-serif;
+    
+   
+    margin: 0;
+    padding: 0;
+    
+   /*  background: url('https://images.unsplash.com/photo-1457276587196-a9d53d84c58b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+    background-size: cover; */
+    background:white;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f2f7f2;
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="number"] {
+    width: 100px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color:white;
+    color:black;
+    border: none;
+    border-radius: 4px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 30px;
+    font-family: "Jost", sans-serif;
+}
+
+button:hover {
+    background-color:black;
+    color:white;
+}
+
+#answerSheet {
+    margin-top: 20px;
+    padding: 20px;
+    padding-right: 0px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.option {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000;
+    border-radius: 50%; /* Makes the shape a circle */
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.option.selected {
+    background-color: #007bff;
+    color: #fff;
+}
+/* Updated styles to highlight correct and incorrect answers */
+
+.correct {
+    background-color: #7fff7f; /* Green */
+}
+
+.incorrect {
+    background-color: #ff7f7f; /* Red */
+}
+
+/* Rest of the styles remain the same */
+
+
+.option {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #909497;
+    border-radius: 50%;
+    margin: 0 5px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.option.selected {
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+
+.incorrect {
+    background-color: #ff7f7f; /* Red */
+}
+.option {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #909497;
+    border-radius: 50%;
+    margin: 0 5px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    outline: none; /* Remove default focus outline */
+}
+
+.option.selected {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.correct {
+    background-color:#15cd15; 
+}
+
+.incorrect {
+    background-color: #ff7f7f; 
+}
+.option {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin: 0 5px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    outline: none; 
+}
+
+.option.selected {
+    background-color: #4c555f;
+    border-color: #4c555f;
+    color: #fff;
+
+}
+
+.option.selected:focus {
+    outline: none;
+}
+
+.correct {
+    background-color: #15cd15;
+    color: white;
+    
+    border-color: #15cd15;
+}
+
+.incorrect {
+    background-color:red; /* Red */
+    color: white;
+}
+.correct-answer {
+    background-color: #7fff7f; /* Green */
+    color: #fff;
+}
+/* Updated styles to differentiate correct answer */
+
+.correct-answer {
+    background-color: #f0f0f0; /* Light gray */
+    color: #000; /* Black */
+}
+/* Updated styles to differentiate correct answer */
+
+.correct-answer {
+    margin-top: 5px;
+    color: green; /* Green color for correct answer */
+    font-weight:lighter;
+    font-family: "Jost", sans-serif;
+}
+/* Updated styles to mark the correct answer circle green */
+.correct-answer-circle {
+    background-color: #7fff7f; /* Green */
+    color: #fff; /* White */
+}
+
+
+/* Updated styles to mark the circle of the correct answer in green */
+
+.correct-answer-circle {
+    background-color: green;
+    color: #fff;
+
+}
+
+.correct-answer {
+    margin-top: 5px;
+    color:green; 
+    font-weight: 600;
+}
+
+
+.option {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #0000009c;
+    border-radius: 50%; /* Makes the shape a circle */
+    margin: 0 10px;
+    font-size: 30px;
+    cursor: pointer;
+  margin-top:5px;
+  font-weight: lighter;
+  /* margin-left:8px; */
+}
+
+.last-element-display {
+  
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+  font-size: 25px;
+  color:darkred;
+  font-weight: bold;
+}
+
+
+#timer {
+    color: red;
+    font-size: 30px;
+    font-family: revert;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #0116a5;
+    background-color:#3E4D5C;
+    font-family: "Jost", sans-serif;
+    opacity: 1;
+    color: white;
+    border: solid 1px black;
+    border-top: 0px;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+   border-radius: 10px;
+     width: 40%;
+    left:0;
+    right: 0;
+    top: 0;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px 10px;
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+
+input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.skip{
+    background-color:#30353a;
+    border-color: #30353a;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding:0px;
+    margin-left: 2px;
+    margin-right: 1px;
+}
+
+
+.last-element-display {
+    position: absolute;
+    top: 0;
+    /* right: 0; */
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    font-size: 25px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height to center vertically, optional */
+}
+
+
+
+#noteIt {
+    color: #000;
+    font-size: 20px;
+    /* background-color: rgb(0 211 255 / 22%); */
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-weight: bolder;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 15px;
+    padding-right: 15px;
+    border:solid 1px #3E4D5C;
+}
+
+[id^="question"]{
+    
+    padding-top: 50px;
+    padding-left: 15px;
+    align-content: center;
+    font-size: 20px;
+   
+}
+
+.feedback-message {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    text-align: center;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size:larger;
+    border: 2px solid green; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+
+    animation: float 5s infinite ease-in-out;
+    
+}
+.highlight {
+    font-weight: bold;
+    background:rgb(0, 47, 255);
+    background:white;
+    color:red;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.justifyUserDesign {
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+    font-size: 10px; /* Adjust the font size */
+    font-weight: bold;
+    color: #000;
+    background: linear-gradient(135deg, #f0f0f0, #dcdcdc); /* Gradient background */
+    padding:5px;
+    border: 3px solid #666;
+    width: fit-content;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    letter-spacing: 3px; /* Space out the letters */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+.justifyUserDesign span {
+    display: inline-block;
+    transform: rotate(-10deg); /* Rotate letters */
+    color: #333;
+    background: linear-gradient(120deg, #ffcc00, #ff6600); /* Gradient text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for text */
+}
+.justifyUserDesign::before, .justifyUserDesign::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(120deg, #ff0000, #0000ff); /* Gradient line */
+    top: 25%;
+    left: 0;
+    transform: rotate(-5deg);
+}
+.justifyUserDesign::after {
+    top: 75%;
+    transform: rotate(5deg);
+}
+.scratches {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.05),
+        rgba(0, 0, 0, 0.05) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+
+
+#needToKnow {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid green;
+    border-radius: 5px;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  color:green;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#needToKnow p {
+    text-align: justify;
+}
+
+/* #originalMarks{
+    border-color: green;
+    color:black;
+    width: 100%;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     border-radius: 5px;
+     border-style: outset;
+}  */
+
+button#generatedText {
+    margin: 6% 20% 5% 20%;
+    color: red;
+}
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    font-family: "Jost", sans-serif;
+    font-size: 35px;
+    
+    
+}
+.form-group label {
+    flex: 1;
+    text-align: left;
+}
+.form-group input {
+    /* flex: 1; */
+    text-align: center;
+}
+.form-group input {
+    width: 100px; /* Set a fixed width for the input boxes */
+    margin-left:10px; /* Add some space between the label and input */
+    height: 20px;
+}
+#timePerQuestionText{
+    padding-top: 10px;
+    
+}
+#numberInputText{
+    padding-top: 10px;
+}
+#needTag{
+    font-family: "Jost", sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom:5px;
+   
+}
+#headerBox{
+    background: #F1FAFB;
+    border: solid 1px #3e4d5c1a;
+    font-family: "Jost", sans-serif;
+    font-weight: normal;
+    border-radius: 8px;
+    
+}
+.common-style{
+    margin: 8px;
+    margin-left: 0px;
+    
+}
+hr {
+    border: 0;
+    height: 1px; /* Adjust the height as needed */
+    background-color: #3e4d5c1a; /* Your desired color */
+}
+#originalMarkssss{
+ padding-left: 0px;
+ margin-left: 0px;
+}
+@media (min-width: 600px){
+    #timer {
+        color: red;
+        font-size: 30px;
+        font-family: revert;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background-color: #0116a5;
+        background-color:#3E4D5C;
+        font-family: "Jost", sans-serif;
+        opacity: 1;
+        color: white;
+        border: solid 1px black;
+        border-top: 0px;
+        padding: 5px;
+        text-align: center;
+        font-weight: bold;
+       border-radius: 10px;
+         width: 40%;
+        left:0;
+        right: 0;
+        top: 0;
+        width: 70%;
+        margin: 0 auto;
+        padding: 5px 10px;
+        font-size: 20px;
+        margin-top: 2px;
+    }
+}
+
+
+
+
+@media (min-width: 1000px){
+    #timer {
+        color: red;
+        font-size: 30px;
+        font-family: revert;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background-color: #0116a5;
+        background-color:#3E4D5C;
+        font-family: "Jost", sans-serif;
+        opacity: 1;
+        color: white;
+        border: solid 1px black;
+        border-top: 0px;
+        padding: 5px;
+        text-align: center;
+        font-weight: bold;
+       border-radius: 10px;
+         width: 40%;
+        left:0;
+        right: 0;
+        top: 0;
+        width: 45%;
+        margin: 0 auto;
+        padding: 5px 10px;
+        font-size: 20px;
+        margin-top: 2px;
+    }
+}
+
+
+/* Container styling */
+#headerBox {
+    /* width: 100%; */
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
+}
+/* Flexbox layout for aligning label and value */
+.info-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; /* Space between each info-box */
+}
+
+/* Styling for labels and values */
+.label {
+
+    font-family: "Jost", sans-serif;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+
+.value {
+   
+    font-family: "Jost", sans-serif;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    /* color: #2a00a5; Blue color to highlight the value */
+    margin: 0;
+    color: #034293;
+}
+
+/* Optional: add a line separator between items */
+.info-box:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+#animated-image {
+    width: 100%; /* Adjust according to your need */
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+#hiddenDiv {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+#hiddenDiv.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#hiddenDiv img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#hiddenDiv img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+#hiddenDiv img:focus {
+    outline: 2px solid #007bff;
+}
+
+.chat-bubble {
+    width: 67px;
+    height: 67px;
+    
+    color:darkred;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    user-select: none;
+    transition: transform 0.3s;
+    font-size:15px;
+    font-weight: bold;
+    border: 3px solid darkred;
+background-image: url("pop_q_papers.jpg");
+background-size:cover;
+background-repeat: no-repeat;
+
+}
+
+.chat-window {
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    display: none;
+    flex-direction: column;
+    z-index: 1001;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s, transform 0.3s;
+    
+}
+
+.chat-window.open {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.chat-header {
+    background-color: #3a9eb8;
+    color: white;
+    padding:5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 35px;
+}
+
+ .chat-header button {
+    background: none;
+    color: white;
+    margin: 0px;
+} 
+#chatWindow.chat-window.open{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.image-container {
+    flex: 1;
+    padding: 0px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    text-align: center;
+  
+}
+
+.image-container {
+    width: 300px;
+    height: 200px;
+    overflow-y: scroll;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #066182 #f2f7f2; /* For Firefox */
+    position: relative;
+}
+
+.image-container::-webkit-scrollbar {
+    width: 14px; /* Increase width for a more prominent scrollbar */
+}
+
+.image-container::-webkit-scrollbar-track {
+    background: #f2f7f2; /* Light background for the track */
+    border-radius: 10px; /* Rounded corners for the track */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for depth */
+}
+
+.image-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #066182, #a8d5e2); /* Diagonal gradient for a different effect */
+    border-radius: 20px; /* More rounded corners for a pill-like shape */
+    border: 3px solid #f2f7f2; /* Thicker border for spacing */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), /* Inner shadow for depth */
+                0 2px 5px rgba(0, 0, 0, 0.3); /* Outer shadow for a floating effect */
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.image-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #022f43, #066182); /* Darker gradient on hover */
+    transform: scale(1.1); /* Slightly enlarge the thumb on hover */
+}
+
+.image-container::-webkit-scrollbar-corner {
+    background-color: transparent; /* Optional: Make the bottom corner (where scrollbars meet) transparent */
+   
+}
+
+
+/* 
+.image-item {
+    margin-bottom: 15px;
+    text-align: center;
+} */
+
+.image-item p {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #333;
+   
+}
+div.image-container{
+    margin: 0px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    padding: 0px;
+    margin: 0px;
+}
+button#closeChat{
+    font-size: 35px;
+    
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: none;
+    z-index: 1000;
+}
+/* Style for the chat bubble */
+.chat-bubble {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    left: 10px;   /* Adjust as needed */
+    cursor: pointer;
+    padding: 10px;
+    background: #3a9eb8;
+    color: white;
+    border-radius: 50%;
+    border-color: #3a9eb8;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add any other styling you need */
+}
+
+/* Style for the image box */
+.image-box {
+    position: absolute;
+    display: none; /* Initially hidden */
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the chat bubble */
+#chatBubble {
+    position: fixed; /* Fixes the position relative to the viewport */
+    bottom: 10px; /* Positions the bubble 10px from the bottom */
+    left: 10px; /* Adjust this value as needed to position horizontally */
+    z-index: 1000; /* Ensures the bubble stays on top of other elements */
+    background-color: #3a9eb8; /* Adjust the color as needed */
+    color: white; /* Text color */
+    padding: 10px; /* Add padding around the text */
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+   
+}
+
+/* Optional: Add styles for when the bubble is being dragged */
+#chatBubble.dragging {
+    cursor: move; /* Change cursor when dragging */
+}
+/* Styles for the chat bubble */
+#chatBubble {
+    position: fixed; /* Fixes the position relative to the viewport */
+    top: 10px; /* Positions the bubble 10px from the top */
+    right: 10px; /* Positions the bubble 10px from the right */
+    z-index: 1000; /* Ensures the bubble stays on top of other elements */
+    
+}
+
+/* Optional: Add styles for when the bubble is being dragged */
+#chatBubble.dragging {
+    cursor: move; /* Change cursor when dragging */
+}
+.chat-icon-container {
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Makes the div circular */
+    position: fixed;
+    top: 20px; /* Adjust the position as needed */
+    right: 20px; /* Adjust the position as needed */
+    cursor: pointer;
+}
+
+.chat-icon-container i {
+    font-size: 24px;
+}
+
+.option.incorrect{
+    border-color: red;
+}
+.option.correct{
+    border-color:#15cd15;
+}
+
+#answers {
+    width: 100%;
+    padding: 10px;
+    /* font-size: 20px; */
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+#attentionPls{
+    border: dotted 1px #008cb3;
+    border-radius: 10px;
+    color: #008cb3;
+    padding: 10px 15px;
+   font-family: "Jost", sans-serif;
+    font-size: small;
+    
+}
