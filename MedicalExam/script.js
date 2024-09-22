@@ -302,7 +302,7 @@ designSb.onmouseout = function() {
 
     document.getElementById('answerSheet').style.display = 'block';
     document.getElementById('timer').style.display = 'block';
-    document.getElementById('chatBubble').style.display="block";
+    //document.getElementById('chatBubble').style.display="block";
     // document.getElementById('chatBubble').style.padding="2px";
     document.getElementById('chatBubble').style.textAlign="center";
     const timerDisplay = document.getElementById('timer');
