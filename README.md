@@ -6,3 +6,9 @@ Here question paper images will be ser in the website. answers will be preset by
 --------------------------
 
 ### https://nayeemislamnishad.github.io/ExamVibe4.0/
+
+-------------------------
+--------------------------
+## Physics Math type exam links:
+-------------------------
+#### Semiconductor:  https://nayeemislamnishad.github.io/ExamVibe4.0/Physics/semiconductor.html
