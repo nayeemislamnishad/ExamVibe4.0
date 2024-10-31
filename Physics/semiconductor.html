@@ -18,6 +18,21 @@
     
    
 <style>
+
+
+ body{
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+
+
+
+
+
+    
     /* Custom alert box styles */
     .custom-alert, .custom-confirm {
         display: none;
@@ -156,7 +171,7 @@ input[type="text"]:focus {
     });
 </script>
 </head>
-<body>
+<body oncontextmenu="return false">
     <div id="chatBubble" class="chat-bubble chat-icon-container">
         <i class="fas fa-comments"></i>
     </div>
@@ -409,6 +424,31 @@ input[type="text"]:focus {
     const timeInMinutes = timeInSeconds / 60;
     const timerDuration = customRound(timeInMinutes);
 
+    </script>
+
+    <script>
+        // Disable right-click context menu
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+        });
+
+        // Disable common keyboard shortcuts (like Ctrl+U, Ctrl+S, Ctrl+C, etc.)
+        document.addEventListener("keydown", function(e) {
+            if (
+                (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'a' || e.key === 'c' || e.key === 'x' || e.key === 'p')) || // common shortcuts
+                e.key === "F12" // inspect element shortcut
+            ) {
+                e.preventDefault();
+                alert("Keyboard shortcuts are disabled.");
+            }
+        });
+
+        // Prevent long-press to disable copy on mobile devices
+        document.addEventListener("touchstart", function(e) {
+            if (e.touches.length > 1) { // multi-touch to prevent accidental blocking
+                e.preventDefault();
+            }
+        });
     </script>
 </body>
 </html>
