@@ -947,17 +947,4 @@ button#closeChat{
 }
 
 
-input[type="radio"]:focus {
-    outline: none; /* To remove focus outline */
-    background-color: transparent; /* To remove background */
-}
-input[type="radio"]:checked {
-    background-color: transparent !important; /* Force transparent background */
-    box-shadow: none !important; /* Remove any shadow */
-    outline: none !important; /* Remove outline */
-}
-
-input[type="radio"] {
-    -webkit-tap-highlight-color: transparent; /* Disable highlight on mobile browsers */
-}
 
