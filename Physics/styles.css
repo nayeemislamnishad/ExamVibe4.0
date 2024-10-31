@@ -957,4 +957,7 @@ input[type="radio"]:checked {
     outline: none !important; /* Remove outline */
 }
 
+input[type="radio"] {
+    -webkit-tap-highlight-color: transparent; /* Disable highlight on mobile browsers */
+}
 
